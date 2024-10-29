@@ -1,0 +1,96 @@
+
+/* Body reset and background */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: #1E1E1E;
+    height: 100%;
+    overflow: hidden;
+}
+
+.background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Windy background animation */
+.windy-bg {
+    position: absolute;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1), rgba(0,0,0,0));
+    animation: moveWind 5s linear infinite;
+    opacity: 0.3;
+}
+
+@keyframes moveWind {
+    0% { transform: translate(-50%, -50%); }
+    100% { transform: translate(50%, 50%); }
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    margin: 100px auto;
+    width: 90%;
+    max-width: 700px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
+    color: white;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #F3D250;
+    margin-bottom: 20px;
+    letter-spacing: 1.5px;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.search-box input {
+    width: 60%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-right: 10px;
+}
+
+.search-box button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color: #F3D250;
+    color: #1E1E1E;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.search-box button:hover {
+    background-color: #F19E34;
+}
+
+.weather-display {
+    margin-top: 20px;
+}
+
+.current-weather {
+    font-size: 1.5rem;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
